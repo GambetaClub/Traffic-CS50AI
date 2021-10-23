@@ -1,9 +1,10 @@
 # Traffic-CS50
 
-## In this project, I uses TensorFlow to build a neural network to classify road signs based on an image of those signs. To do so,I needed a labeled dataset: a collection of images that have already been categorized by the road sign represented in them.
+### In this project, I used TensorFlow to build a neural network to classify road signs based on an image of those signs. To do so, I needed a labeled dataset: a collection of images that have already been categorized by the road sign represented in them.
 
 ----------------------------------
 ## Procedures to improve accuraccy: 
+
 I have tried first with the following settings:
 Convolutional layer with 32 filters using 3x3 kernel
 A max-pooling layer using 2x2 pool size
