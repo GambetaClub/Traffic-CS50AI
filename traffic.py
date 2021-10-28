@@ -30,8 +30,13 @@ def main():
         np.array(images), np.array(labels), test_size=TEST_SIZE
     )
 
-    # Get a compiled neural network
-    model = get_model()
+    if len(sys.argv) == 3:
+        # Get saved trained neural network
+        filename = sys.argv[2]
+        model = tf.keras.models.load_model(filename)
+    else:
+        # Get a new compiled neural network
+        model = get_model()
 
     # Fit model on training data
     model.fit(x_train, y_train, epochs=EPOCHS)
@@ -107,10 +112,10 @@ def get_model():
 
         # Add a hidden layer with dropout 
         tf.keras.layers.Dense(128, activation="relu"),
-        tf.keras.layers.Dropout(0.2),
+        tf.keras.layers.Dropout(0.4),
 
         # Add output layer with output units for all 43 signs
-        tf.keras.layers.Dense(43, activation="softmax")
+        tf.keras.layers.Dense(NUM_CATEGORIES, activation="softmax")
     ])
 
     model.compile(
