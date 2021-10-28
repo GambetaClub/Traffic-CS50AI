@@ -21,4 +21,8 @@ The result of this test was an accuracy of 0.9225 and a loss of 0.3172.
 Lastly, I tried with a configuration that gave me the best result of them all. I added an extra convolutional layer and a max-pooling layer, identical to the first two. I set 36 filters with a 3x3 kernel for the convolutional layers. On the other side, 2x2 kernel for the max-pooling layers. In the end, A hidden layer with 128 cells and a dropout of 0.2.
 The result of this test was an accuracy of 0.9697 and a loss of 0.1224.
 
-The dropout rate at the beginning was too high, which influenced the number of total cells used in the hidden layer. Also, adding extra layers to the Network improved the results dramatically. However, it took more time for the machine to finish the process. The latency was a little bit higher, but the accuracy was accuracy improved.  
+The dropout rate at the beginning was too high, which influenced the number of total cells used in the hidden layer. Also, adding extra layers to the Network improved the results dramatically. However, it took more time for the machine to finish the process. The latency was a little bit higher, but the accuracy was accuracy improved. 
+
+## Update
+
+Now the program is able to use saved a model which allows to train it several times. The maximum precision it achieved so far is 98.87%.
